@@ -4,6 +4,14 @@ on:
     types:
       - opened
   workflow_dispatch:
+  push:
+    branches:
+      - master
+      - 'dev-*' # <-- single asterisk means any characters other than slashes, e.g. 'dev-new'
+      - 'feat/**' # <-- double asterisk means any character INCLUDING slashes, e.g. 'feat/new/button'
+    paths-ignore:
+      - '.github/workflows/*'
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
