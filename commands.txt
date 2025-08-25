@@ -1,0 +1,119 @@
+Token: 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
+
+Create and initialise a Git repo:
+
+    git init
+
+	
+Identify the author:
+
+	git config --global user.email [your email]
+	git config --global user.name [your name]
+
+
+Stage code changes for the next commit:
+
+    git add file_1 file_2 file_n
+    git add subfolder/file_1
+
+
+Get the current status of the repo:
+
+    git status
+
+
+Create a commit for the staged changes (with a message)
+
+    git commit -m "message"
+
+
+Output a chronological list of commits:
+
+    git log
+
+
+Temporarily move back to a commit:
+
+    git checkout [commit_id]
+    git checkout [branch_name]
+
+    Example:
+
+    git checkout a2f09749add22d8f65a69dabd613732681b68e35
+    git checkout master
+
+
+Revert the changes of a commit:
+
+    git revert [commit_id]
+
+
+Undo commit(s) up to a specific commit by deleting everything in between:
+
+    git reset --hard [commit_id]
+
+
+Create a branch from the latest commit (HEAD)
+
+    git branch [name]
+
+
+Get list of all branches:
+
+    git branch
+
+
+Delete a branch:
+
+    git branch -D [name]
+
+
+Create a new branch and automatically check it out:
+
+    git checkout -b [branch_name]
+
+
+Merge with a branch:
+
+    git merge [branch_name]
+
+
+Add a remote named <name> for the repository at <URL>. 
+
+    git remote add [name] [url]
+
+    Example:
+    git remote add origin https://github.com/ultradekadent/github-course.git
+
+
+Create a link between the local and remote main branch:
+
+	git push --set-upstream origin master
+
+
+Push commit(s) to the remote repo:
+
+    git push [name] [branch]
+
+    Example:
+    git push origin master
+
+
+Pull commits from the remote repo:
+
+    git pull
+
+A pull request is just you telling the remote server (and the people who maintain it) that you have some updated commits that you would like them to look over and integrate with the remote repository.
+If they accept the changes, the remote repo will run 'git pull' against your local repository, integrating the code without you ever having to have an SSH key authorized to do so.
+
+
+Clone a remote repo:
+
+    git clone [url] [destination path]
+
+
+Get URL of an remote repo:
+
+    git remote get-url [name]
+
+    
